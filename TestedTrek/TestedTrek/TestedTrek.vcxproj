@@ -52,7 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\src\StarTrek;..\src\Untouchables;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\gtest-1.7.0\include;..\gmock-1.7.0\include;..\TestedTrek\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -83,6 +83,8 @@
     <ClInclude Include="src\StarTrek\Galaxy.h" />
     <ClInclude Include="src\StarTrek\Game.h" />
     <ClInclude Include="src\StarTrek\Klingon.h" />
+    <ClInclude Include="src\Tests\MockGalaxy.h" />
+    <ClInclude Include="src\Tests\MockKlingon.h" />
     <ClInclude Include="src\Untouchables\SampleClient.h" />
     <ClInclude Include="src\Untouchables\WebGadget.h" />
     <ClInclude Include="stdafx.h" />
@@ -92,12 +94,15 @@
     <ClCompile Include="src\StarTrek\Galaxy.cpp" />
     <ClCompile Include="src\StarTrek\Game.cpp" />
     <ClCompile Include="src\StarTrek\Klingon.cpp" />
+    <ClCompile Include="src\Tests\MockGalaxy.cpp" />
+    <ClCompile Include="src\Tests\MockKlingon.cpp" />
+    <ClCompile Include="src\Tests\PhaserPinningTests.cpp" />
+    <ClCompile Include="src\Tests\PhotonPinningTests.cpp" />
     <ClCompile Include="src\Untouchables\SampleClient.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TestedTrek.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

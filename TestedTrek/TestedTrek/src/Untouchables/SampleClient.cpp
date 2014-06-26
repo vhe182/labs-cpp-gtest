@@ -4,8 +4,8 @@
 
 #include <cstdio>
 #include <memory>
-#include "../StarTrek/Game.h"
-#include "../StarTrek/Klingon.h"
+#include <StarTrek/Game.h>
+#include <StarTrek/Klingon.h>
 
 using namespace tr1;
 using namespace StarTrek;
