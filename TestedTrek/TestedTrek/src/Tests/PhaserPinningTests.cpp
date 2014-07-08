@@ -22,6 +22,9 @@ void insertPhaserCommand() {
 }
 
 class GameFixturePhaser : public ::testing::Test {
+public:
+	GameFixturePhaser();
+
 protected:
 	virtual void SetUp() {
 		galaxyOutput.clear();
@@ -35,6 +38,8 @@ protected:
 	Galaxy context;
 	Game game;
 };
+GameFixturePhaser::GameFixturePhaser() :context(nullptr){}
+
 
 static const int EnergyInNewGame = 10000;
 

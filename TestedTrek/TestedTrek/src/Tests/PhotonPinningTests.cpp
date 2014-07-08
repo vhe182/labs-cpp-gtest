@@ -26,6 +26,9 @@ static int mockRandom(void) {
 }
 
 class GameFixturePhoton : public ::testing::Test {
+public:
+	GameFixturePhoton();
+
 protected:
 	virtual void SetUp() {
 		Game::generator = &mockRandom; // without this the test would often fail
@@ -42,6 +45,7 @@ protected:
 	Galaxy context;
 	Game game;
 };
+GameFixturePhoton::GameFixturePhoton() :context(nullptr){}
 
 TEST_F(GameFixturePhoton, NotifiedIfNoTorpedoesRemain) {
     game.torpedoes(0);
