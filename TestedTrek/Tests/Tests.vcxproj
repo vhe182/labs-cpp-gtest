@@ -11,13 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{226A8C07-9C78-4DC5-8817-792A2E879FE1}</ProjectGuid>
+    <ProjectGuid>{D0856198-6329-4924-B01D-BAF534C6BF03}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>TestedTrek</RootNamespace>
+    <RootNamespace>Tests</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -47,12 +47,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\TestedTrek\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\gtest-1.7.0\include;..\gmock-1.7.0\include;..\TestedTrek;..\TestedTrek\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -63,7 +64,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -78,24 +80,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <ClCompile Include="..\TestedTrek\src\Tests\MockGalaxy.cpp" />
+    <ClCompile Include="..\TestedTrek\src\Tests\MockKlingon.cpp" />
+    <ClCompile Include="..\TestedTrek\src\Tests\PhaserPinningTests.cpp" />
+    <ClCompile Include="..\TestedTrek\src\Tests\PhotonPinningTests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\StarTrek\Galaxy.h" />
-    <ClInclude Include="src\StarTrek\Game.h" />
-    <ClInclude Include="src\StarTrek\Klingon.h" />
-    <ClInclude Include="src\Untouchables\WebGadget.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\TestedTrek\src\Tests\MockGalaxy.h" />
+    <ClInclude Include="..\TestedTrek\src\Tests\MockKlingon.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\StarTrek\Galaxy.cpp" />
-    <ClCompile Include="src\StarTrek\Game.cpp" />
-    <ClCompile Include="src\StarTrek\Klingon.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ProjectReference Include="..\gmock-1.7.0\msvc\2010\gmock.vcxproj">
+      <Project>{34681f0d-ce45-415d-b5f2-5c662dfe3bd5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\gtest-1.7.0\msvc\gtest.vcxproj">
+      <Project>{c8f6c172-56f2-4e76-b5fa-c3b423b31be7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TestedTrek\TestedTrek.vcxproj">
+      <Project>{226a8c07-9c78-4dc5-8817-792a2e879fe1}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

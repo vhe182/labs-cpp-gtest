@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "gtest-1.7.0\msvc\g
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "gmock-1.7.0\msvc\2010\gmock.vcxproj", "{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleClient", "SampleClient\SampleClient.vcxproj", "{66497679-6566-4711-B8AB-0D1E2177D144}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{D0856198-6329-4924-B01D-BAF534C6BF03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +31,14 @@ Global
 		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Debug|Win32.Build.0 = Debug|Win32
 		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Release|Win32.ActiveCfg = Release|Win32
 		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Release|Win32.Build.0 = Release|Win32
+		{66497679-6566-4711-B8AB-0D1E2177D144}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66497679-6566-4711-B8AB-0D1E2177D144}.Debug|Win32.Build.0 = Debug|Win32
+		{66497679-6566-4711-B8AB-0D1E2177D144}.Release|Win32.ActiveCfg = Release|Win32
+		{66497679-6566-4711-B8AB-0D1E2177D144}.Release|Win32.Build.0 = Release|Win32
+		{D0856198-6329-4924-B01D-BAF534C6BF03}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0856198-6329-4924-B01D-BAF534C6BF03}.Debug|Win32.Build.0 = Debug|Win32
+		{D0856198-6329-4924-B01D-BAF534C6BF03}.Release|Win32.ActiveCfg = Release|Win32
+		{D0856198-6329-4924-B01D-BAF534C6BF03}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

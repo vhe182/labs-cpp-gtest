@@ -26,7 +26,7 @@ void Game::fireWeapon(Galaxy& galaxy) {
 				message << "Klingon out of range of phasers at " << distance << " sectors...";
 				galaxy.writeLine(message.str());
 			} else {
-				int damage = amount - (((amount /20)* distance /200) + randomWithinLimitOf(200));
+				int damage = amount - (((amount /20)* distance /200) + rnd(200));
 				if (damage < 1)
 					damage = 1;
 				stringstream message;
@@ -52,12 +52,12 @@ void Game::fireWeapon(Galaxy& galaxy) {
 		Klingon* enemy = (Klingon*)galaxy.variable("target");
 		if (t_ > 0) {
 			int distance = enemy->distance();
-			if ((randomWithinLimitOf(4) + ((distance / 500) + 1) > 7)) {
+			if ((rnd(4) + ((distance / 500) + 1) > 7)) {
 				stringstream message;
 				message << "Torpedo missed Klingon at " << distance << " sectors...";
 				galaxy.writeLine(message.str());
 			} else {
-				int damage = 800 + randomWithinLimitOf(50);
+				int damage = 800 + rnd(50);
 				stringstream message;
 				message << "Photons hit Klingon at " << distance << " sectors with " << damage << " units";
 				galaxy.writeLine(message.str());
