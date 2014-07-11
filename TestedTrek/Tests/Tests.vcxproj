@@ -82,8 +82,8 @@
   <ItemGroup>
     <ClCompile Include="..\TestedTrek\src\Tests\MockGalaxy.cpp" />
     <ClCompile Include="..\TestedTrek\src\Tests\MockKlingon.cpp" />
-    <ClCompile Include="..\TestedTrek\src\Tests\PhaserPinningTests.cpp" />
-    <ClCompile Include="..\TestedTrek\src\Tests\PhotonPinningTests.cpp" />
+    <ClCompile Include="..\TestedTrek\src\Tests\PhaserCharacterizationTests.cpp" />
+    <ClCompile Include="..\TestedTrek\src\Tests\PhotonCharacterizationTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\TestedTrek\src\Tests\MockGalaxy.h" />
