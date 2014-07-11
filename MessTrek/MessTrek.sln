@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MessTrek", "MessTrek\MessTrek.vcxproj", "{40D73E3C-F389-49F7-8795-752A8151A48A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleClient", "SampleClient\SampleClient.vcxproj", "{B1A904E8-2394-4EC7-B1DA-ABB63F593225}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "..\TestedTrek\gtest-1.7.0\msvc\gtest.vcxproj", "{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{3C0D9380-EF51-4C1D-B50C-BC323F1E14A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "..\TestedTrek\gmock-1.7.0\msvc\2010\gmock.vcxproj", "{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40D73E3C-F389-49F7-8795-752A8151A48A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{40D73E3C-F389-49F7-8795-752A8151A48A}.Debug|Win32.Build.0 = Debug|Win32
+		{40D73E3C-F389-49F7-8795-752A8151A48A}.Release|Win32.ActiveCfg = Release|Win32
+		{40D73E3C-F389-49F7-8795-752A8151A48A}.Release|Win32.Build.0 = Release|Win32
+		{B1A904E8-2394-4EC7-B1DA-ABB63F593225}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1A904E8-2394-4EC7-B1DA-ABB63F593225}.Debug|Win32.Build.0 = Debug|Win32
+		{B1A904E8-2394-4EC7-B1DA-ABB63F593225}.Release|Win32.ActiveCfg = Release|Win32
+		{B1A904E8-2394-4EC7-B1DA-ABB63F593225}.Release|Win32.Build.0 = Release|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}.Debug|Win32.Build.0 = Debug|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}.Release|Win32.ActiveCfg = Release|Win32
+		{C8F6C172-56F2-4E76-B5FA-C3B423B31BE7}.Release|Win32.Build.0 = Release|Win32
+		{3C0D9380-EF51-4C1D-B50C-BC323F1E14A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3C0D9380-EF51-4C1D-B50C-BC323F1E14A9}.Debug|Win32.Build.0 = Debug|Win32
+		{3C0D9380-EF51-4C1D-B50C-BC323F1E14A9}.Release|Win32.ActiveCfg = Release|Win32
+		{3C0D9380-EF51-4C1D-B50C-BC323F1E14A9}.Release|Win32.Build.0 = Release|Win32
+		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Debug|Win32.Build.0 = Debug|Win32
+		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Release|Win32.ActiveCfg = Release|Win32
+		{34681F0D-CE45-415D-B5F2-5C662DFE3BD5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

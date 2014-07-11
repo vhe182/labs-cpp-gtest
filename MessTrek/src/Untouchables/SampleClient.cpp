@@ -26,7 +26,7 @@ int main(void) {
 	shared_ptr<Klingon> klingon(new Klingon);
 	WebGadget wg("phaser", "1000", (void*)klingon.get());
 	Game game;
-	game.fireWeapon(&wg);
+	game.fireWeapon(wg);
 	waitForUserToEndGame();
 
 	return 0;

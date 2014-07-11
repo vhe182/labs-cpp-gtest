@@ -1,11 +1,10 @@
 #include "stdafx.h"
 
-#include "Galaxy.h"
+#include <sstream>
+
 #include "Game.h"
 #include "Klingon.h"
-
-#include <sstream>
-#include <cstdlib>
+#include "Galaxy.h"
 
 namespace StarTrek {
 
