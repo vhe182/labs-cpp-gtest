@@ -9,10 +9,6 @@ TEST(SuperSet, InitialSizeIsZero) {
 	EXPECT_EQ(0, set.size());
 }
 
-TEST(CalculatorTest, Addition) {
-	EXPECT_EQ(4, 2 + 2);
-}
-
 int main(int argc, char** argv)
 {
 	// run all tests
