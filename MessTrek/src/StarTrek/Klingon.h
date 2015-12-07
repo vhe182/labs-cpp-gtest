@@ -3,6 +3,7 @@
 
 
 #include <cstdlib>
+#include <time.h>
 
 namespace StarTrek {
 
@@ -12,7 +13,10 @@ private:
 	int energy_;
 
 public:	
-	Klingon() : distance_(100 + rand() % 4000), energy_(1000+ rand() % 2000) {
+	Klingon() {
+		srand(time(NULL)));
+		distance_ = (100 + rand() % 4000);
+		energy_ = (1000+ rand() % 2000);
 	}
 
 	int distance() {

@@ -1,9 +1,11 @@
 #include <sstream>
+#include <time.h>
 
 #include "Game.h"
 #include "Klingon.h"
 
 StarTrek::Game::Game() : e_(10000), t_(8) {
+	srand(time(NULL)));
 }
 
 void StarTrek::Game::fireWeapon(Untouchables::WebGadget& wg) {
