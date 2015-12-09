@@ -5,7 +5,7 @@
 #include "Klingon.h"
 
 StarTrek::Game::Game() : e_(10000), t_(8) {
-	srand(time(NULL)));
+	srand(time(NULL));
 }
 
 void StarTrek::Game::fireWeapon(Untouchables::WebGadget& wg) {

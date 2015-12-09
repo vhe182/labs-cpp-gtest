@@ -14,7 +14,7 @@ private:
 
 public:	
 	Klingon() {
-		srand(time(NULL)));
+		srand(time(NULL));
 		distance_ = (100 + rand() % 4000);
 		energy_ = (1000+ rand() % 2000);
 	}
