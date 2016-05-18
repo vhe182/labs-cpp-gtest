@@ -1,0 +1,99 @@
+
+# Requires "Maiken" - https://github.com/dekken/maiken
+
+# How to get/build maiken
+#   windows - 
+#     binary - https://github.com/dekken/maiken/raw/binaries/win10_msvc15_x64/mkn.exe
+#   nix - requires gcc5
+#     git clone http://github.com/dekken/maiken -b master mkn && cd mkn && make nix
+#   bsd - requires clang 3.7
+#     git clone http://github.com/dekken/maiken -b master mkn && cd mkn && make bsd CXX=clang++
+
+# How to configure maiken
+#   windows - 
+#     requires
+#       MSVC - http://go.microsoft.com/fwlink/?LinkId=691126 
+#       configuring settings.yaml
+#         %HOMEDRIVE%%HOMEPATH%\maiken.settings
+#         https://github.com/dekken/maiken/wiki
+#
+#   *nix/bsd 
+#     fine if gcc/clang are on path
+#       otherwise configure ~/.maiken/settings.yaml
+
+# How to use maiken
+#  
+#   windows - msvc
+#     mkn clean build -dtKa -EHsc -p trekTest
+#     mkn run -p trekTest
+#
+#   *nix/bsd - gcc/clang
+#     mkn clean build -dtSa "-fPIC -Os" -l -pthread -p trekTest
+#     mkn run -p trekTest
+
+name: tdd
+
+profile:
+  - name: giw
+    main: GettingItWorking/GettingItWorking/SimplestFailure.cpp
+    self: gtest
+
+  - name: lunexTest
+    src:  Lunex
+    main: Lunex/StockQuoteTests/StockQuoteTests.cpp
+    self: gmock
+
+  - name: setTest
+    inc: SuperSet/SuperSet
+    src: SuperSet/SuperSet
+    main: SuperSet/SetDemo/StockQuoteTests.cpp
+    self: gmock
+
+  - name: trekTest
+    inc: TestedTrek/TestedTrek TestedTrek/TestedTrek/src
+    src: | 
+          TestedTrek/TestedTrek/src, 0
+          TestedTrek/TestedTrek/src/StarTrek/Game.cpp
+          TestedTrek/TestedTrek/src/StarTrek/Klingon.cpp
+          TestedTrek/TestedTrek/src/Tests
+    main: TestedTrek/TestedTrek/src/Tests/PhaserCharacterizationTests.cpp
+    self: gmock
+
+  - name: messClient
+    inc: MessTrek MessTrek/src
+    src: | 
+          MessTrek/src, 0
+          MessTrek/src/StarTrek
+    main: MessTrek/src/Untouchables/SampleClient.cpp
+    self: gmock
+
+  - name: messTest
+    inc: MessTrek MessTrek/src
+    src: | 
+          MessTrek/src, 0
+          MessTrek/src/StarTrek
+    main: MessTrek/Tests/YourTests.cpp
+    self: gmock
+
+  - name: gtest
+    install: lib
+    inc: TestedTrek/gtest-1.7.0 TestedTrek/gtest-1.7.0/include
+    src: TestedTrek/gtest-1.7.0/src/gtest-all.cc
+
+  - name: gmock
+    install: lib
+    inc: TestedTrek/gmock-1.7.0 TestedTrek/gmock-1.7.0/include
+    src: TestedTrek/gmock-1.7.0/src/gmock-all.cc
+    self: gtest
+
+
+# MINIMAL PROFILES # 
+  # - name: gmock
+  #   dep:
+  #     - name: google.test
+  #       version: master
+  #       profile: gmock
+  # - name: gtest
+  #   dep:
+  #     - name: google.test
+  #       version: master
