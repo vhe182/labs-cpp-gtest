@@ -2,12 +2,15 @@
 
 #include "gtest/gtest.h"
 
+#include "StarTrek/Game.h"
+
 TEST(StarTrekCharacterization, SomeAsYetUnknownScenario) {
 	EXPECT_TRUE(false);
 }
 
 int main(int argc, char** argv)
 {
+	StarTrek::Game game;
 	// run all tests
 	::testing::InitGoogleTest(&argc, argv);
 
