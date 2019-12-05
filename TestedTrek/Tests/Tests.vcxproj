@@ -86,6 +86,7 @@
     <ClCompile Include="..\TestedTrek\src\Tests\PhaserCharacterizationTests.cpp" />
     <ClCompile Include="..\TestedTrek\src\Tests\PhotonCharacterizationTests.cpp" />
     <ClCompile Include="ShieldTest.cpp" />
+    <ClCompile Include="ShipTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\TestedTrek\src\Tests\MockGalaxy.h" />

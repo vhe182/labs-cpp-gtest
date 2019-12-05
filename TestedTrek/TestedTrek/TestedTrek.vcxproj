@@ -82,6 +82,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ship.h" />
     <ClInclude Include="src\StarTrek\Galaxy.h" />
     <ClInclude Include="src\StarTrek\Game.h" />
     <ClInclude Include="src\StarTrek\Klingon.h" />
@@ -91,6 +92,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ship.cpp" />
     <ClCompile Include="src\StarTrek\Galaxy.cpp" />
     <ClCompile Include="src\StarTrek\Game.cpp" />
     <ClCompile Include="src\StarTrek\Klingon.cpp" />
