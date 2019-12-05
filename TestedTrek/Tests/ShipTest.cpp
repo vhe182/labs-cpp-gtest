@@ -10,7 +10,7 @@ TEST(ShipTest, TransferReservesEnoughReserves) {
 
 TEST(ShipTest, TransferReservesNotEnoughReserves) {
 	Ship ship;
-	EXPECT_FALSE(ship.validTransfer(20001));
+	EXPECT_FALSE(ship.validTransfer(20000));
 }
 
 TEST(ShipTest, TransferReservesPartialFill) {
