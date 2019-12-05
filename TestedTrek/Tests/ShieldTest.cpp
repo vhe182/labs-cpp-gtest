@@ -6,6 +6,11 @@ TEST(ShieldTest, ShieldDownByDefault) {
 	EXPECT_FALSE(shield.isUp());
 }
 
+TEST(ShieldTest, ShieldRepairTimeZeroByDefault) {
+	Shield shield;
+	EXPECT_EQ(shield.timeToRepair(),0);
+}
+
 TEST(ShieldTest, ShieldsRaisedWithEnergy) {
 	Shield shield;
 	shield.raiseShields();

@@ -5,10 +5,7 @@ Shield::Shield()
 {
 	m_shieldUp = false;
 	m_shieldEnergy = 5000;
-}
-
-Shield::~Shield()
-{
+	m_repairTime_starDays = 0;
 }
 
 bool Shield::isUp()
@@ -35,7 +32,17 @@ void Shield::transferEnergy(int energy)
 	}
 }
 
+void Shield::takeDamage(int damage)
+{
+
+}
+
 int Shield::shieldEnergy()
 {
 	return m_shieldEnergy;
+}
+
+int Shield::timeToRepair()
+{
+	return Subsystem::m_repairTime_starDays;
 }

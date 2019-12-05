@@ -20,7 +20,7 @@ void Ship::transferEnergy(int energy)
 			{
 				m_EnergyReserves -= energy;
 				shield.transferEnergy(energy);
-			} 
+			}
 			else
 			{
 				int transferableEnergy = shield.SHIELDMAX - shield.shieldEnergy();
@@ -45,6 +45,28 @@ bool Ship::validTransfer(int desiredEnergy)
 		return desiredEnergy < m_EnergyReserves;
 	else
 		return shield.shieldEnergy() + desiredEnergy >= 0;
+}
+
+void Ship::enemyHit(int damage)
+{
+	if (shield.isUp()) {
+		if (shield.shieldEnergy() - damage < 0) {
+			int remainder = damage - shield.shieldEnergy();
+			shield.transferEnergy(damage*(-1));
+			damageSubsystem(remainder);
+		}
+		else {
+			shield.transferEnergy(damage*(-1));
+		}
+	}
+	else {
+		damageSubsystem(damage);
+	}
+}
+
+void Ship::damageSubsystem(int damage)
+{
+	shield.takeDamage(damage);
 }
 
 void Ship::set_EnergyReserves(int energy)

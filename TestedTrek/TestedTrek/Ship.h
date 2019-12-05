@@ -13,6 +13,8 @@ public:
 	void set_EnergyReserves(int energy);
 	int get_EnergyReserves();
 	bool validTransfer(int desiredEnergy);
+	void enemyHit(int damage);
+	void damageSubsystem(int damage);
 
 private:
 	int m_EnergyReserves;
