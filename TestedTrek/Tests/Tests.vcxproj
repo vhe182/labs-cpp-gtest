@@ -85,12 +85,14 @@
     <ClCompile Include="..\TestedTrek\src\Tests\MockKlingon.cpp" />
     <ClCompile Include="..\TestedTrek\src\Tests\PhaserCharacterizationTests.cpp" />
     <ClCompile Include="..\TestedTrek\src\Tests\PhotonCharacterizationTests.cpp" />
+    <ClCompile Include="MockRandom.cpp" />
     <ClCompile Include="ShieldTest.cpp" />
     <ClCompile Include="ShipTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\TestedTrek\src\Tests\MockGalaxy.h" />
     <ClInclude Include="..\TestedTrek\src\Tests\MockKlingon.h" />
+    <ClInclude Include="MockRandom.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\gmock-1.7.0\msvc\2010\gmock.vcxproj">
