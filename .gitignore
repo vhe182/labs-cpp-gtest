@@ -28,3 +28,15 @@ ipch
 *.filters
 *.user
 *.sdf
+
+TestedTrek/.vs/TestedTrek/v15/Browse.VC.db
+
+*.vcxproj
+
+TestedTrek/.vs/TestedTrek/v15/Browse.VC.opendb
+
+TestedTrek/.vs/TestedTrek/v15/Solution.VC.db
+
+TestedTrek/.vs/TestedTrek/v15/Solution.VC.db-shm
+
+TestedTrek/.vs/TestedTrek/v15/Solution.VC.db-wal
