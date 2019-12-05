@@ -8,9 +8,8 @@ public:
 	virtual int timeToRepair() = 0;
 
 protected:
-	Subsystem();
-	~Subsystem();
-private:
+	Subsystem() = default;
+	~Subsystem() = default;
 	int m_repairTime_starDays;
 };
 
